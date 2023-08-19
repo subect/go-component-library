@@ -1,4 +1,4 @@
-module go-component-library
+module github.com/subect/go-component-library
 
 go 1.18
 
