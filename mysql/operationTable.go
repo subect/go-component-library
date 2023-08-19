@@ -9,6 +9,11 @@ func CreateTable(db *gorm.DB, tableName string, model interface{}) {
 	}
 }
 
+// Insert 插入一条记录
+func Insert(db *gorm.DB, model interface{}) error {
+	return db.Create(model).Error
+}
+
 // FindById 根据id查询，并返回结果
 func FindById(db *gorm.DB, model interface{}, id int) error {
 	return db.First(model, id).Error
